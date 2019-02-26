@@ -44,6 +44,10 @@ import iCalRoutes from './core/iCal/iCalRoutes';
 import iCalCron from './core/iCal/iCalCron';
 import exportICalRoutes from './core/iCal/exportIcal/exportRoutes';
 
+// Health
+import checkHealth from './core/health/checkHealth';
+
+
 // Stripe
 import stripePayment from './core/payment/stripe/stripePayment';
 import stripeRefund from './core/payment/stripe/stripeRefund';
@@ -97,6 +101,10 @@ reservationReview(app);
 iCalRoutes(app);
 iCalCron(app);
 exportICalRoutes(app);
+
+// Healthy Check
+checkHealth(app);
+
 
 // Stripe
 stripePayment(app);

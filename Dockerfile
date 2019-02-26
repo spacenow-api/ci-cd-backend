@@ -9,8 +9,11 @@ ADD package.json /app/package.json
 
 ENV PATH /app/node_modules/.bin:$PATH
 RUN yarn
+RUN babel-node tools/run clean
+RUN babel-node tools/run extractMessages
+RUN babel-node tools/run copy
+RUN babel-node tools/run bundle
 
 EXPOSE 3000
 
-ENTRYPOINT ["/bin/bash", "/app/run.sh"]
-CMD ["start"]
+ENTRYPOINT ["node","build/server.js"]
