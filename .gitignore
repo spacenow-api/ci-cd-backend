@@ -13,3 +13,4 @@ images/upload
 sslcerts
 .env
 .DS_Store
+.lock
