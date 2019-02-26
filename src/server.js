@@ -135,7 +135,7 @@ app.use(passport.initialize());
 
 app.post('/logout', function(req, res) {
   res.clearCookie('id_token');
-  res.redirect('http://localhost:3001/');
+  res.redirect('/');
 });
 
 //
